@@ -1,0 +1,23 @@
+.fesettings-tab-icon {
+	background-image:url(../../../Images/Modules/Settings/tabIcon.gif);
+}
+
+.x-box-inner {
+	overflow:visible;
+}
+
+.sitemgr_template-constdisplayfield {
+	line-height: 1.5em;
+	margin:      5px;
+	margin-top:  4px;
+}
+
+.x-form-field-readonly {
+	background-color: transparent;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	border-bottom: none;
+}
+
+
