@@ -181,12 +181,12 @@ class Tx_SitemgrFesettings_Modules_Settings_SettingsController extends Tx_Sitemg
 						// useable for files, folders and pages
 					case 'EXT:templavoila_framework/class.tx_templavoilaframework_pagelink.php:&tx_templavoilaframework_pagelink->main':
 							// select page wizard
-						$field['fieldConfig']['wizardUri']    = 'browse_links.php?mode=wizard&P[fieldConfig][type]=input&P[field]='. $fieldName .'&P[formName]='.$formName.'&P[itemName]='. $fieldName . '&P[params][blindLinkOptions]=url,mail,spec';
+						$field['fieldConfig']['wizardUri']    = \TYPO3\CMS\Backend\Utility\BackendUtility::getModuleUrl('wizard_element_browser') . '&mode=wizard&P[fieldConfig][type]=input&P[field]='. $fieldName .'&P[formName]='.$formName.'&P[itemName]='. $fieldName . '&P[params][blindLinkOptions]=url,mail,spec';
 						$field['fieldConfig']['triggerClass'] = 'x-form-search-trigger';
 					break;
 					case '':
 							// select file/folder only wizard
-						$field['fieldConfig']['wizardUri']    = 'browse_links.php?mode=wizard&P[fieldConfig][type]=input&P[field]='. $fieldName .'&P[formName]='.$formName.'&P[itemName]='. $fieldName . '&P[params][blindLinkOptions]=url,page,mail,spec';
+						$field['fieldConfig']['wizardUri']    = \TYPO3\CMS\Backend\Utility\BackendUtility::getModuleUrl('wizard_element_browser') . '&mode=wizard&P[fieldConfig][type]=input&P[field]='. $fieldName .'&P[formName]='.$formName.'&P[itemName]='. $fieldName . '&P[params][blindLinkOptions]=url,page,mail,spec';
 						$field['fieldConfig']['triggerClass'] = 't3-icon t3-icon-apps t3-icon-apps-filetree t3-icon-filetree-folder-default';
 					break;
 					default:
